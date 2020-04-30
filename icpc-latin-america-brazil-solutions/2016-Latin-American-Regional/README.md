@@ -4,7 +4,7 @@
 | --- | --- |
 | A  | Ad-hoc  |
 | B  | Segment Tree + Lazy Propagation  |
-| C  | Geometry  |
+| C  | Geometry + Combinatorics  |
 | D  | Geometry + Greedy Algorithm  |
 | E  | Wavelet Tree  |
 | F  | Ad-hoc  |
