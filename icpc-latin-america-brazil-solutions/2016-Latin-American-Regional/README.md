@@ -10,6 +10,6 @@
 | F  | Ad-hoc  |
 | G  | String + Hash  |
 | H  | Priority Queue  |
-| I  | Dynamic Programming + Knuth Optimization  |
+| I  | Dynamic Programming + D&C Optimization  |
 | J  | Basic Number Theory  |
 | K  | Maximum Flow  |
