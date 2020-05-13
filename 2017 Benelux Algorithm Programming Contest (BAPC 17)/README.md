@@ -14,4 +14,4 @@
 | J  | BIT or SegTree with Lazy Propagation  |
 | K  | Topological Sorting  |
 | L  | Greedy Algorithm + logarithm  |
-| M  | Sweepline + LIS  |
+| M  | Sweep Line + LIS  |
