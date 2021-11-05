@@ -4,7 +4,7 @@
 
 | Problem  | Name| Contents | complexity |
 | --- | --- | --- | --- |
-| A | Assigning Prizes | -- | -- |
+| A | Assigning Prizes | Lagrange Interpolation | O(N^2) |
 | B | Beautiful Words | Suffix Automaton | O(N*(SIGMA + log(N))) |
 | C | Creating Multiples | Modular Inverse | O(L*log(B)) |
 | D | Dividing the Kingdom | Union Find + Bipartite Graph | O(M*log(M)) |
