@@ -9,10 +9,10 @@
 | C | Creating Multiples | Modular Inverse | O(L*log(B)) |
 | D | Dividing the Kingdom | Union Find + Bipartite Graph | O(M*log(M)) |
 | E | Escalator | Simulation | O(N) |
-| F | Freedom from Prison | -- | -- |
+| F | Freedom from Prison | Sweep Line + DP on tree | S*log(S), S = "amount of points" |
 | G | Getting in Shape | Fibonacci + Backtracking | O(N^(1/3)) |
 | H | Handling the Blocks | sort | O(N*log(N)) |
-| I | Inverting Everything | -- | -- |
+| I | Inverting Everything | Backtracking + Union Find | I do not know |
 | J | Just Bootfall | Minimum Cut | O((V^2) * E) |
 | K | Kathmandu | Ad-Hoc | O(M) |
 | L | Listing Passwords | Union Find + Binary Lifting | O(N * log(N) * alfa(N) |
