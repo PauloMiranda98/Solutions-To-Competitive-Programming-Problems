@@ -125,32 +125,44 @@ public:
 pii v[52];
 int freq[52];
 
-int main() {	
-	ios_base::sync_with_stdio(false); cin.tie(NULL);
-	int n;
-	cin >> n;
-	for(int i=1; i<=n; i++){
-		int a, b;
-		cin >> a >> b;
-		v[i] = pii(a, b);
-		freq[a]++;
-		freq[b]++;
-	}
-	int ans=0;
-	for(int i=1; i<=n; i++){
-		Dinic dinic(2*n+2);
-		for(int j=1; j<=n; j++){
-			if(i != j and v[j].F != i and v[j].S != i){
-				dinic.addEdge(0, j, 1);			
-			}
-			dinic.addEdge(j, n+v[j].F, 1);
-			dinic.addEdge(j, n+v[j].S, 1);			
-			dinic.addEdge(n+j, 2*n+1, max(freq[i]-1, 0));
-		}
-		dinic.addEdge(0, i, 2);
-		if( (dinic.maxFlow(0, 2*n + 1)+freq[i]) != (n+1))
-			ans++;
-	}
-	cout << ans << endl;
-	return 0;
+int main() {  
+  ios_base::sync_with_stdio(false); cin.tie(NULL);
+  int n;
+  cin >> n;
+  for(int i=1; i<=n; i++){
+    int a, b;
+    cin >> a >> b;
+    v[i] = pii(a, b);
+    freq[a]++;
+    freq[b]++;
+  }
+  
+  int ans = n;
+    
+  for(int i=1; i<=n; i++){
+    Dinic dinic(2*n+2);
+    int s = 0, t = 2*n + 1;
+    
+    for(int j=1; j<=n; j++){
+      if(j == i)
+        continue;
+      
+      if(v[j].F != i and v[j].S != i){
+        dinic.addEdge(s, j, 1);
+
+        dinic.addEdge(j, n + v[j].F, 1);
+        dinic.addEdge(j, n + v[j].S, 1);
+      }
+      
+      if(j == v[i].F or j == v[i].S)
+        dinic.addEdge(n + j, t, max(freq[i] - 2, 0));
+      else
+        dinic.addEdge(n + j, t, max(freq[i] - 1, 0));
+    }
+    
+    if(dinic.maxFlow(s, t) == ((n - 1) - freq[i]))
+      ans--;
+  }
+  cout << ans << endl;
+  return 0;
 }
