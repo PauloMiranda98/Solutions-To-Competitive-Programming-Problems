@@ -14,7 +14,8 @@
 | H | Helping the Transit | SCC + Greedy | O(N) |
 | I | Intercepting Information | Ad-Hoc | O(1) |
 | J | Playing 23 | Ad-Hoc | O(N) |
-| K | Kalel, the Jumping Frog | DP + Reeds-Sloane | O(bad) |
+| K-V1 | Kalel, the Jumping Frog | DP + Reeds-Sloane | O(bad) |
+| K-V2 | Kalel, the Jumping Frog | Matrix exponentiation + Polynomial Multiplication | O(D^3 * log(N) * K^2) |
 | L | Listing Tedious Paths | Small to Large | O(N * log(N) |
-| M | Hopscotch Marathon | Mobius + Parallel Binary Search | O(good) |
+| M | Hopscotch Marathon | Mobius + Parallel Binary Search | O((N + Q) * log(N + Q) * 2^MAXD), where MAXD < 64 to n <= 10^5 |
 | N | Numbers on both Sides | Sliding Window + Set | O(N * log(N)) |
